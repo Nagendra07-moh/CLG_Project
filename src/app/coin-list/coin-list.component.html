@@ -1,0 +1,34 @@
+<div class="banner ms-05">
+   <div class="container">
+      <div class="header">
+         <h1>Cryptovest</h1>
+         <br>
+         <h6>View all Crypto currency latest updates</h6>
+         <br>
+      </div>
+      <div class="sub-header">
+         <marquee behavior="scroll" direction="left" onmouseover="stop()" onmouseout="start()" loop = "infinite">
+            <div class="row">
+               <ng-container *ngFor ="let row of bannerData">
+                  <div class="col-1">
+                     <div class="card">
+                        <img [src]="row.image" width = "150" class= "img-fluid" alt="">
+                        <div class="card-body">
+                           <h5 class="card-title">{{row.symbol | uppercase}} 
+                              <span class="text-danger" >{{row.market_cap_change_percentage_24h}}
+                              </span></h5>
+                           <p class="card-text">{{row.current_price | currency:"INR"}}</p>
+                        </div>
+                     </div>
+                  </div>
+               </ng-container>
+            </div>
+         </marquee>
+      </div>
+   </div>
+</div>
+
+<div class="container mt-3">
+   <!--Table-->
+
+</div>
